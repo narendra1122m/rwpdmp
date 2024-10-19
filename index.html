@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Book Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f6e5a7;
+        }
+
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?books');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(14, 3, 3);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(163, 20, 20, 0.5);
+            /* Dark overlay */
+            z-index: 1;
+        }
+
+        .hero h1 {
+            z-index: 2;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            z-index: 2;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .card-img-top {
+            height: 200px;
+            /* Set a fixed height */
+            object-fit: cover;
+            /* Maintain aspect ratio and cover the area */
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Pustakalaya</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#books">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Welcome to our Pustakalaya</h1>
+        <p>Your journey into the world of books begins here!</p>
+    </header>
+
+    <section id="books" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Featured Books</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="book1.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML & CSS book:</h5>
+                            <p class="card-text">Beginners to Advance complete course</p>
+                            <button class="btn btn-success">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="book2.jpeg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Javascript:</h5>
+                            <p class="card-text">The Comprehensive Guide Book and E-Book</p>
+                            <button class="btn btn-success">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="book3.jpg" class="card-img-top" alt="Book 3">
+                        <div class="card-body">
+                            <h5 class="card-title">CSS:</h5>
+                            <p class="card-text">Basic Fundamental Guide for Beginners E-Book</p>
+                            <button class="btn btn-success">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p>
+            <h3>Balaji Pustakalay</h3>
+            <h5> Name:Sevra Divyesh<br>
+                Phone Number:9712712345<br>
+                Email:sevradivyesh@gmail.com<br>
+                Address:Gujarat,India</h5><br>
+            </p>
+            <p>At our book store, we offer a wide selection of books across all genres. Our mission is to inspire a love
+                for reading and to provide a cozy space for book lovers.</p>
+        </div>
+    </section>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+
+            <!-- Google Map -->
+            <div class="mt-5">
+                <h3 class="text-center">Our Location</h3>
+                <div class="text-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3700.8591411949573!2d70.45642387634303!3d21.5175406729754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be2e90de80e1b11%3A0x9a72514a0a89b5a7!2sKunj%20Stationary%2C%20GC2F%2B4VV%2C%20Balaji%20Haight%2C%20Vanthali%20Rd%2C%20Junagadh%2C%20Gujarat%20360311!5e0!3m2!1sen!2sin!4v1600762329856!5m2!1sen!2sin"
+                        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="text-center">
+        <p>&copy; 2024 Balaji Pustakalaya. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
